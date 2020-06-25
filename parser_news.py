@@ -100,33 +100,3 @@ class Parser:
             file.truncate()
 
         return new_key
-
-
-if __name__ == "__main__":
-
-    pr = Parser('l_key.txt')
-    for link in pr.new_posts():
-        print(pr.post_info(link))
-    pr.update_lastkey(pr.get_lastkey())
-
-
-    # res = requests.get('https://vesti.ua/vse-novosti')
-    # soup = BeautifulSoup(res.content, 'lxml')
-
-    # posts = soup.select('.posts > .post > .post-content > .title > a')
-    # for post in posts:
-    #     print(post.text)
-    #     print(post['href'])
-
-    #     rs = requests.get(post['href'])
-    #     sp = BeautifulSoup(rs.content, 'lxml')
-
-    #     try:
-    #         img = sp.find('div', {'class': 'first-post-image'}).img['src']
-    #         print(img + '\n')
-    #     except:
-    #         print('NaN\n')
-
-
-        
-    
